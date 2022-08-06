@@ -1,6 +1,9 @@
 <template>
   <main class="main">
-    <h1 id="attr" class="header">
+    <h1
+      id="attr"
+      class="header"
+    >
       Только знаки препинания
     </h1>
     <textarea
