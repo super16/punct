@@ -115,15 +115,15 @@ export default defineComponent({
 
   .input-area {
     @apply block
+      focus:border-transparent
       focus:outline-none
+      focus:ring-2
+      focus:ring-gray-800
       h-72
       min-h-full
       p-1
       rounded
       w-full
-      focus:border-transparent
-      focus:ring-2
-      focus:ring-gray-800
   }
 
   .main {

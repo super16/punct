@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" version="1.1" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <rect transform="scale(-1)" x="-17" y="-17" width="17" height="17" fill="#f3f4f6"/>
+ </g>
+ <g aria-label="Т">
+  <path d="m6 14v-0.4l2-0.2v-10h-0.4q-2 0-3 0.2l-0.2 2h-0.6v-3h10v3h-0.6l-0.2-2q-0.2-0.06-1-0.1-0.8-0.05-2-0.05h-0.4v10l2 0.2v0.4z" />
+ </g>
+</svg>
