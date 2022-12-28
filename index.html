@@ -31,5 +31,50 @@
     <script type="module" src="/src/main.ts"></script>
     <title>Только знаки препинания</title>
   </head>
-  <body id="app" class="bg-gray-100 flex flex-col min-h-screen"></body>
+  <body
+    id="app"
+    class="bg-gray-100 flex flex-col min-h-screen"
+  >
+    <main class="flex-col flex-grow items-center max-w-xl mx-auto p-6">
+      <h1
+        id="attr"
+        class="font-serif m-4 text-4xl text-center"
+      >
+        Только знаки препинания
+      </h1>
+      <textarea
+        v-model="text"
+        aria-labelledBy="attr"
+        class="block focus:border-transparent focus:outline-none focus:ring-2 focus:ring-gray-800 h-72 min-h-full p-1 rounded w-full"
+      ></textarea>
+      <button
+        class="bg-gray-800 font-bold hover:bg-black mt-4 px-4 py-3 text-white"
+        @click="processText()"
+      >
+        Показать
+      </button>
+      <button
+        class="bg-gray-800 font-bold hover:bg-black mt-4 px-4 py-3 text-white ml-4"
+        @click="clearText()"
+      >
+        Сбросить
+      </button>
+      <p
+        v-if="show && processedText.length > 0"
+        class="bg-gray-200 break-words mt-3 p-3 rounded"
+        v-html="processedText"
+      />
+    </main>
+    <footer>
+      <p class="bottom-0 font-serif mr-3 sticky text-right">
+        Сделал
+        <a
+          class="text-gray-600"
+          :href="repoLink"
+        >
+          super16
+        </a>
+      </p>
+    </footer>
+  </body>
 </html>
