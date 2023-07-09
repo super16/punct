@@ -7,6 +7,7 @@
   "repository": "github:super16/punct",
   "private": true,
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
@@ -15,6 +16,10 @@
   },
   "dependencies": {
     "petite-vue": "^0.4.1"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=8"
   },
   "devDependencies": {
     "@types/node": "^20.4.1",
