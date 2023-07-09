@@ -6,16 +6,26 @@ This application supports Russian language & expanded set of punctuation marks.
 
 See [Demo](https://super16.github.io/punct/).
 
+## Install
+
+```shell
+pnpm i 
+```
+
+## Lint
+
+```shell
+pnpm run lint
+```
+
 ## Run
 
-```bash
-npm install
-npm run dev
+```shell
+pnpm run dev
 ```
 
 ## Build
 
-```bash
-npm install
-npm run build
+```shell
+pnpm run build
 ```
