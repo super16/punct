@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <link rel="icon" href="/punct/favicon.ico" sizes="any">
+    <link rel="icon" href="/punct/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/punct/apple-touch-icon.png">
+    <link rel="manifest" href="/punct/manifest.webmanifest">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta
+      name="description"
+      content="Веб-приложение, которое убирает из любого текста все буквы и оставляет лишь знаки препинания."
+    >
+    <meta property="og:title" content="Только знаки препинания">
+    <meta
+      property="og:description"
+      content="Веб-приложение, которое убирает из любого текста все буквы и оставляет лишь знаки препинания."
+    >
+    <meta property="og:image" content="https://super16.github.io/punct/card.png">
+    <meta property="og:url" content="https://super16.github.io/punct/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Только знаки препинания">
+    <meta name="twitter:creator" content="@doXcrimes">
+    <meta
+      name="twitter:description"
+      content="Веб-приложение, которое убирает из любого текста все буквы и оставляет лишь знаки препинания."
+    >
+    <meta name="twitter:image" content="https://super16.github.io/punct/twitter-card.png">
+    <meta name="twitter:image:alt" content="Только знаки препинания">
+    
+    <title>Только знаки препинания</title>
+    <script type="module" crossorigin src="/punct/assets/index-f079f36d.js"></script>
+    <link rel="stylesheet" href="/punct/assets/index-df3194dc.css">
+  </head>
+  <body
+    id="app"
+    class="bg-gray-100 flex flex-col min-h-screen"
+  >
+    <main class="flex-col flex-grow items-center max-w-xl mx-auto p-6">
+      <h1
+        id="attr"
+        class="font-serif m-4 text-4xl text-center"
+      >
+        Только знаки препинания
+      </h1>
+      <textarea
+        v-model="text"
+        aria-labelledBy="attr"
+        class="block focus:border-transparent focus:outline-none focus:ring-2 focus:ring-gray-800 h-72 min-h-full p-1 rounded w-full"
+      ></textarea>
+      <button
+        class="bg-gray-800 font-bold hover:bg-black mt-4 px-4 py-3 text-white"
+        @click="processText()"
+      >
+        Показать
+      </button>
+      <button
+        class="bg-gray-800 font-bold hover:bg-black mt-4 px-4 py-3 text-white ml-4"
+        @click="clearText()"
+      >
+        Сбросить
+      </button>
+      <p
+        v-if="show && processedText.length > 0"
+        class="bg-gray-200 break-words mt-3 p-3 rounded"
+        v-html="processedText"
+      />
+    </main>
+    <footer>
+      <p class="bottom-0 font-serif mr-3 sticky text-right">
+        Сделал
+        <a
+          class="text-gray-600"
+          :href="repoLink"
+        >
+          super16
+        </a>
+      </p>
+    </footer>
+  </body>
+</html>
